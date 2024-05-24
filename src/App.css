@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply p-0 m-0 box-border;
+}
+.HeroSection {
+  @apply font-[sans-serif];
+}
+.hero_img {
+  @apply border border-[#6F6AF8] rounded-[0.3rem];
+}
+.btn {
+  @apply bg-[#6F6AF8] text-white py-2 px-3 cursor-pointer;
+}
+.nav_link {
+  @apply cursor-pointer hover:text-[#6F6AF8];
+}
+.bloger_img {
+  @apply w-12 h-12 object-cover rounded-[50px] border border-[#6F6AF8];
+}
+.blog_category {
+  @apply bg-[#6F6AF8] w-fit p-1 text-white  text-sm uppercase;
+}
+.blog_title {
+  @apply text-3xl;
+}
+.moreDetail {
+  @apply text-sm font-semibold;
+}
+.heading {
+  @apply text-3xl font-[sans-serif];
+}
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.dark_icon {
+  @apply text-3xl transition duration-100 rounded-[50px] cursor-pointer;
+}
+.dark_icon:hover {
+  @apply bg-[#e8e9e9];
+}
+.dark {
+  @apply !bg-slate-950 !text-white transition duration-200;
+}
+.light {
+  @apply transition duration-200;
+}
+.scrolltoTop:hover {
+  transform: rotate(360deg);
+  transition: visibility 1s ease, transform 0.3s ease;
+}
+.show {
+  @apply transition duration-300 flex items-baseline flex-col justify-center bg-white p-4 absolute right-20 rounded-br-[1rem] font-[sans-serif] gap-1 shadow-black shadow-sm mt-1;
+}
+.hide {
+  @apply hidden;
+}
+.dark .show {
+  @apply border-[1px] border-white;
+}
+
+/*Media Queries Responsive*/
+
+@media (max-width: 1172px) {
+  .blogs {
+    grid-template-columns: repeat(2, 0fr);
+  }
+  .nav_item {
+    @apply gap-4;
+  }
+  .navbar {
+    @apply gap-20;
+  }
+  .hero_img {
+    @apply w-[28rem] object-cover;
+  }
+  .HeroSection {
+    padding: 1rem;
+  }
+}
+@media (max-width: 970px) {
+  .text-nowrap {
+    @apply gap-2;
+  }
+  .navbar {
+    @apply gap-[21rem];
+  }
+  .hero_img {
+    @apply w-[90%];
+  }
+  .HeroSection {
+    @apply flex-col justify-center pt-8 text-lg;
+  }
+  .heroBlog_detail {
+    padding: 1rem 2rem;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .hide_burger {
+    @apply hidden transition duration-700;
+  }
+  .show_burger {
+    @apply flex flex-col gap-2 bg-[#EAEDF1] absolute top-20 text-xl w-full right-0 left-0 py-8  transition duration-700;
+    box-shadow: 0rem 5rem 6rem #6c6c6c;
+  }
+  .nav_item {
+    @apply gap-8;
+  }
+}
+@media (max-width: 744px) {
+  .bloger_img {
+    @apply object-cover;
+  }
+  .blog {
+    @apply w-[19rem] gap-2;
+  }
+  .navbar {
+    @apply gap-[17rem];
+  }
+  .HeroSection {
+    padding: 1rem;
+  }
+  .hero_img {
+    @apply w-full;
+  }
+  .blog_detail {
+    font-size: large;
+  }
+}
+
+@media (max-width: 610px) {
+  .HeroSection {
+    @apply w-[85%];
+  }
+  .navbar {
+    @apply gap-[8rem];
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 0fr);
+  }
+  .blog {
+    @apply w-96;
+  }
+}
+@media (max-width: 430px) {
+  .navbar {
+    @apply gap-6;
+  }
+  .nav_item {
+    @apply gap-4;
+  }
+  .blog {
+    @apply w-80 p-2;
+  }
+  .HeroSection {
+    @apply p-2;
+  }
+  .blog_category {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 380px) {
+  .hero_img {
+    @apply h-48;
+  }
+  .heroBlog_detail {
+    padding: 1rem;
+  }
+  .blog_summary {
+    @apply hidden;
+  }
+}
+
+/* Skeleton Media Queries */
+
+@media (max-width: 1064px) {
+  .blogSubSkeleton {
+    grid-template-columns: repeat(2, 0fr);
+    gap: 1rem;
+  }
+}
+@media (max-width: 810px) {
+  .blogSubSkeleton {
+    grid-template-columns: repeat(1, 0fr);
+  }
+}
+@media (max-width: 630px) {
+  .hero_skeleton_img {
+    @apply !w-[26rem];
+  }
+  .skeleton_item {
+    padding: 1rem;
+  }
+}
+@media (max-width: 526px) {
+  .hero_skeleton_img {
+    @apply !w-[22rem] !h-[16rem];
+  }
+  .skeleton_item {
+    padding: 1rem;
+  }
+  .hero_skeleton {
+    padding: 0.4rem;
+  }
+  .hero_skeleton_detail {
+    width: 78%;
+    overflow: hidden;
+  }
+}
+@media (max-width: 419px) {
+  .hero_skeleton_img {
+    @apply !w-[19rem] !h-[12rem];
+  }
+  .blog_skeleton_img {
+    width: 19rem;
+    height: 11rem;
+  }
+  .skeleton_item {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 374px) {
+  .hero_skeleton_img {
+    @apply !w-[16rem] !h-[10rem];
+  }
+  .blog_skeleton_img {
+    width: 15rem !important;
+    height: 9rem !important;
+  }
+  .skeleton_item {
+    width: 90% !important;
+    padding: 0.2rem !important;
+  }
+}
