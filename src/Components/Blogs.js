@@ -8,7 +8,7 @@ function Blog() {
     const [isLoading,setisLoading] = useState(true)
 const fetchMoreData =async ()=>{
   try{
-      let response = await axios.get(`https://newsapi.org/v2/everything?q=${perimeter}&apiKey=5dd5f0cda53b40fe99097c7db8ca2753&page=${page + 1}&pageSize=10`)
+      let response = await axios.get(`https://newsapi.org/v2/everything?q=${perimeter}&apiKey=5c5d00e5c5ac482cbe4ddc59aef9ef68&page=${page + 1}&pageSize=10`)
      let moreRes = response.data.articles
      setMoreData(prevData => [...prevData, ...moreRes])
      setPage(prevPage => prevPage + 1)
