@@ -5,8 +5,8 @@ function BlogHero() {
   const {darkClass,perimeter} = useContext(myContext)
  const [data,setData] = useState([])
   const fetchData = async()=>{
-  //  let response = await axios.get(`https://newsapi.org/v2/everything?q=${perimeter}&apiKey=5dd5f0cda53b40fe99097c7db8ca2753`)
-  //   setData(response.data.articles)
+   let response = await axios.get(`https://newsapi.org/v2/everything?q=${perimeter}&apiKey=5dd5f0cda53b40fe99097c7db8ca2753`)
+    setData(response.data.articles)
  }
  useEffect(()=>{
    fetchData()
