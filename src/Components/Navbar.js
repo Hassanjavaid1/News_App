@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
   const {darkClass,setDarkClass,toggle,settoggle,setPerimeter,setMoreData,setPage} =  useContext(myContext)
-  const { loginWithRedirect,logout,user,isAuthenticated,isLoading } = useAuth0();
+  const { loginWithRedirect,logout,user,isAuthenticated } = useAuth0();
   const [hamburger,setHamburger] = useState('hide_burger')
 
   const [Mode,setMode] = useState(false)
@@ -45,7 +45,10 @@ const handleHamburger = ()=>{
     <>
      <nav className={`bg-[#F6F8FA] dark:bg-slate-900 ${darkClass}`}>
         <div className="navbar flex justify-center items-center gap-[15rem] font-[sans-serif] p-4">
+          <a href="/">
+
             <h2 className="nav_title text-[2rem] font-semibold">My<span className='text-[#6F6AF8]'>Blog</span></h2>
+          </a>
             <ul className='nav_item flex items-center gap-12'>
               <div className={`flex items-center justify-center gap-4 text-nowrap ${hamburger} ${darkClass}`}>
                 <li className='nav_link' onClick={  () => newsCategory('general')}>General Blogs</li>
