@@ -5,13 +5,14 @@ function BlogHero() {
   const {darkClass,perimeter} = useContext(myContext)
  const [data,setData] = useState([])
   const fetchData = async()=>{
-   let response = await axios.get(`https://newsapi.org/v2/everything?q=${perimeter}&apiKey=5c5d00e5c5ac482cbe4ddc59aef9ef68`)
+   let response = await axios.get(`https://newsapi.org/v2/top-headlines?q=${perimeter}&apiKey=5c5d00e5c5ac482cbe4ddc59aef9ef68`)
     setData(response.data.articles)
  }
+ 
  useEffect(()=>{
    fetchData()
   },[perimeter])
-  const randomNews = Math.floor(Math.random() * 20)
+  const randomNews = Math.floor(Math.random() * data.length)
   const {author,title,description,publishedAt,urlToImage,url} = data[randomNews] || []
   return (
     <>
@@ -20,7 +21,7 @@ function BlogHero() {
           <img src={urlToImage} title={author} className="hero_img h-80 w-[35rem] object-cover" alt="" />
           <div className="heroBlog_detail flex flex-col items-baseline gap-3">
             
-            <h3 className="blog_category hover:underline"><a href={url} target="_blank" rel="noopener noreferrer">{author}</a></h3>
+            <h3 className="blog_category hover:underline"><a href={url} target="_blank" rel="noopener noreferrer">{author || 'null'}</a></h3>
             <h2 className="blog_title hover:underline"><a href={url} target="_blank" rel="noopener noreferrer">{title}</a></h2>
             <p className="blog_summary">
               {description}

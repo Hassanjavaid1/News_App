@@ -19,7 +19,7 @@ const fetchMoreData =async ()=>{
   catch(error){
     console.log(error)
     setTimeout(() => {
-      setisLoading(false)
+      setisLoading(true)
     }, 2000);  }
 }
 
