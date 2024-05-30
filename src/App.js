@@ -9,7 +9,7 @@ const BlogHero = React.lazy(() => import('./Components/BlogHero'));
 const Blogs = React.lazy(() => import('./Components/Blogs'));
 function App() {
   return (
-    <div className="componentContainer" basename='/ffds'>
+    <div className="componentContainer">
      <Navbar/>
      <Suspense  fallback={<LoadingSkeleton/>}>
       <BlogHero/>

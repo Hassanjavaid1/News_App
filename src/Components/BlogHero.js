@@ -11,7 +11,7 @@ function BlogHero() {
  useEffect(()=>{
    fetchData()
   },[perimeter])
-  const randomNews = Math.floor(Math.random() * data.length)
+  const randomNews = Math.floor(Math.random() * 20)
   const {author,title,description,publishedAt,urlToImage,url} = data[randomNews] || []
   return (
     <>

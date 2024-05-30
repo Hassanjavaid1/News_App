@@ -4,7 +4,7 @@ import Skeleton from "react-loading-skeleton";
 function LoadingSkeleton() {
   return (
     <>
-      <div className="skeletonContainer">
+      <div className="skeletonContainer" key={'skeleton'}>
         <div className="subContainer flex flex-col justify-center items-center mt-16 mb-16">
           <div className="HeroSection hero_skeleton flex items-center gap-4 bg-[#f5f9ff] px-[5rem] py-[3rem]">
             <Skeleton height={"18rem"} width={"33rem"} className="hero_skeleton_img" />

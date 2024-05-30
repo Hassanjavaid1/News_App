@@ -1,6 +1,6 @@
 {
-  "homepage": "https://Hassanjavaid1.github.io/News_App",
-  "name": "Blog-Website",
+  "homepage": "https://hassanjavaid1.github.io/News_App",
+  "name": "blog-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,5 +46,9 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }

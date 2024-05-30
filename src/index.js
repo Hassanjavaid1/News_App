@@ -11,12 +11,12 @@ root.render(
   <React.StrictMode>
     <ContextApi>
     <Auth0Provider
-    domain="dev-3o4brdsvaugbjfit.us.auth0.com"
-    clientId="nLo6waGRJjZYj6xV3BAbWTwQVr4kjO3o"
-    authorizationParams={{
-      redirect_uri: window.location.origin
-    }}
-  >
+        domain="dev-yp1aessv3oomjxut.us.auth0.com"
+        clientId="KQdZKWgmqvSijkfceJ4DugoF8UJDnBw3"
+        authorizationParams={{
+          redirect_uri: "https://hassanjavaid1.github.io/News_App"
+        }}
+      >
       <App />
       </Auth0Provider>
     </ContextApi>

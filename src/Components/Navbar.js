@@ -21,7 +21,7 @@ const darkMode = ()=>{
 }
 
 const handleToggle = ()=>{
-  if(toggle == 'hide'){
+  if(toggle === 'hide'){
     settoggle('show')
   }else{
     settoggle('hide')
@@ -35,7 +35,7 @@ const newsCategory = (category)=>{
 }
 
 const handleHamburger = ()=>{
-  if(hamburger == 'hide_burger'){
+  if(hamburger === 'hide_burger'){
     setHamburger('show_burger')
   }else{
     setHamburger('hide_burger')
